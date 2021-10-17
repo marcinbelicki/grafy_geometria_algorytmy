@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jadro_wielokata_prostego.iml" filepath="$PROJECT_DIR$/.idea/modules/jadro_wielokata_prostego.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jadro_wielokata_prostego-build.iml" filepath="$PROJECT_DIR$/.idea/modules/jadro_wielokata_prostego-build.iml" />
+    </modules>
+  </component>
+</project>
