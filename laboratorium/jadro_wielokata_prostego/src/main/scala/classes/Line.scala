@@ -1,11 +1,16 @@
 package classes
 
+import classes.Line.YEquals
+import classes.Point.P
+
 trait L
 
 class Line(p1: Point, p2: Point) extends L{
   val A: Double = p1.y - p2.y
   val B: Double = p2.x - p1.x
-  val C: Double = p1.x * p1.y - p2.x * p1.y
+  val C: Double = p1.x * p2.y - p2.x * p1.y
+
+  override def toString: String = s"A: $A B: $B C: $C"
   private def isBetween(x01: Option[Double], x02: Option[Double])(x: Double): Boolean ={
 
     val a: Double => Boolean = x01 match {
@@ -35,7 +40,7 @@ class Line(p1: Point, p2: Point) extends L{
 
 
 
-  def crossPoint(that: Line): P ={
+  def crossP(that: Line): P ={
     val mian = that.A * this.B - this.A  * that.B
     val xBefore = this.C  * that.B - that.C * this.B
     if (mian == 0) {
@@ -55,18 +60,22 @@ class Line(p1: Point, p2: Point) extends L{
       }
     }
   }
+  def crossPoint(that: Line): Point ={
+    crossP(that) match {
+      case a: Point => a
+    }
+  }
+
+}
+object Line {
+  def YEquals(y: Double): Line = new Line(new Point(0,y,true),new Point(1,y,true))
 }
 
-object test extends App {
-  val p1 = new Point(3454,34534,true)
-  val p2 = new Point(34534,5345,true)
-  val p3 = new Point(34534,5345345,true)
-  val p4 = new Point(4345,345343,true)
-
-  println(p3.out)
-  val l1 = new Line(p1,p2)
-  val l2 = new Line(p3,p4)
-  println(l1.crossPoint(l2))
-}
+//object test extends App {
+//  val l = new Line(P(1,0),P(1,1))
+//  val l2 = new Line(P(-1,0.5),P(1,.5))
+//  println(l)
+//  println(YEquals(1).crossPoint(l))
+//}
 
 
