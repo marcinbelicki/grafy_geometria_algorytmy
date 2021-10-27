@@ -1,10 +1,5 @@
 package classes
 
-import classes.Line.YEquals
-import classes.Point.P
-
-trait L
-
 class Line(p1: Point, p2: Point) extends L{
   val A: Double = p1.y - p2.y
   val B: Double = p2.x - p1.x
@@ -60,22 +55,16 @@ class Line(p1: Point, p2: Point) extends L{
       }
     }
   }
-  def crossPoint(that: Line): Point ={
+  def crossPoint(that: Line): List[Point] => List[Point] = {
     crossP(that) match {
-      case a: Point => a
+      case a: Point => a::_
+      case _ => l => l
     }
   }
 
 }
+
 object Line {
   def YEquals(y: Double): Line = new Line(new Point(0,y,true),new Point(1,y,true))
 }
-
-//object test extends App {
-//  val l = new Line(P(1,0),P(1,1))
-//  val l2 = new Line(P(-1,0.5),P(1,.5))
-//  println(l)
-//  println(YEquals(1).crossPoint(l))
-//}
-
 

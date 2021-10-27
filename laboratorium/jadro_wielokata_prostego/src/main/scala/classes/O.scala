@@ -1,6 +1,6 @@
 package classes
 
- trait O
+trait O
 
 object Left extends O
 
