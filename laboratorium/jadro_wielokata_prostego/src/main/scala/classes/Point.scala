@@ -55,8 +55,11 @@ final class Point(a: Double, b: Double, outside: Boolean = false) extends P{
       case _ => localMaxs
     }
   }
-  def distance(that: Point): Double = {
-    Math.sqrt(Math.pow(that.x - this.x,2) + Math.pow(that.y - this.y,2))
+  def distance(that: P): Double = {
+    that match {
+      case NoPoint => Double.PositiveInfinity
+      case a: Point => Math.sqrt(Math.pow(a.x - this.x,2) + Math.pow(a.y - this.y,2))
+    }
   }
 }
 

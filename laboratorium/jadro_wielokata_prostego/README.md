@@ -1,0 +1,1 @@
+Prezentacja rozwiązania drugiego zadania laboratoryjnego znajduje się w pliku [ParaNajblizszychPunktow.scala](src/main/scala/classes/ParaNajblizszychPunktow.scala)

@@ -1,0 +1,110 @@
+{
+  "main": {
+    "id": "268c1f387f6a2f24",
+    "type": "split",
+    "children": [
+      {
+        "id": "c3ffd5af601b35a8",
+        "type": "leaf",
+        "dimension": 48.59090909090909,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "README.md",
+            "mode": "source"
+          }
+        },
+        "group": "8cb22f39ff7053ab"
+      },
+      {
+        "id": "0d12c14d9088faff",
+        "type": "leaf",
+        "dimension": 51.40909090909091,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "README.md",
+            "mode": "preview"
+          }
+        },
+        "group": "8cb22f39ff7053ab"
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "91ccab4d5bebd0f4",
+    "type": "split",
+    "children": [
+      {
+        "id": "f8ab80c8134faae6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4d1dc67ee060fa7c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "e169d6b93ad4b691",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b119a90bfa1e76a4",
+    "type": "split",
+    "children": [
+      {
+        "id": "feabc4946476ac77",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "eef63398fb137fee",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "c3ffd5af601b35a8",
+  "lastOpenFiles": [
+    "README.md",
+    "ćwiczenia_wszytkie.pdf",
+    "wykłady_wszystkie.pdf"
+  ]
+}
