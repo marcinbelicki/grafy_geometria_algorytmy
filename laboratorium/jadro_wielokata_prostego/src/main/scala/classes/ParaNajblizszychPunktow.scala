@@ -25,10 +25,10 @@ object Circle {
 object Zad2 extends JFXApp {
   val defaultWidth = 1000
   val defaultHeight = 1000
-  val scale = 100
+  val scale = 25
 
   val l: List[(Double,Double)] = List(
-    (1,1),(3,1),(3,2),(4,2),(4,4),(3,4),(3,3),(2,3),(2,2),(1,2)
+    (1,1),(1,1),(1,1),(1,1),(1,1),(1,1),(1,1),(1,1),(1,1),(1,1)
   )
 
   val newList: List[Point] = l.map {
@@ -38,16 +38,16 @@ object Zad2 extends JFXApp {
 
   val a: ListBuffer[Point] = ListBuffer.empty
   stage = new JFXApp.PrimaryStage {
-    title.value = "Jądro wielokąta"
+    title.value = "Para najbliższych punktów"
     width = defaultWidth
     height = defaultHeight
 
     scene = new Scene {
       fill = LightGreen
       val square = SetOfPoints(newList)
-      square.getClosestPair  match {
-        case a @ ((p1: Point, _), (p2: Point, _), _) =>
-          println(a)
+      square.getClosestPair match {
+        case (b @ (p1: Point, _), c @ (p2: Point, _), d) =>
+          println(b,c,d/scale)
           content += List(p1, p2).toPolygon(Transparent)
         case _ => ()
       }

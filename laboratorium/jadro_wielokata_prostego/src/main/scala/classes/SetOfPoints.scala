@@ -24,7 +24,7 @@ class SetOfPoints(x: List[(Point,Int)] , y: List[(Point,Int)] ) {
       list match {
         case (head @ (_,index)) ::tail if index <= half & index >= firstIndex=>  Helper2(tail,head::first, second)
         case head::tail => Helper2(tail,first, head::second)
-        case Nil => (first,second)
+        case Nil => (first,second.reverse)
       }
     }
     (Helper(list,Nil),Helper2(list2,Nil,Nil))
@@ -44,7 +44,7 @@ class SetOfPoints(x: List[(Point,Int)] , y: List[(Point,Int)] ) {
         val deltaLength = delta._3
         val s1DeltaL = s1.getDeltaL(deltaLength,l)
         val s2DeltaL = s2.getDeltaL(deltaLength,l)
-        val a = List(List(delta),s1DeltaL.getClosestInDeltaL(s2DeltaL,deltaLength)).flatten.minBy(_._3)
+        val a = List(List(delta),s1DeltaL.getClosestInDeltaL(s2DeltaL)).flatten.minBy(_._3)
         a
     }
   }
@@ -52,7 +52,7 @@ class SetOfPoints(x: List[(Point,Int)] , y: List[(Point,Int)] ) {
     val f: List[(Point,Int)] => List[(Point,Int)] = _.filter(p => Math.abs( p._1.x - l) <= delta)
     new SetOfPoints(f(sX),f(sY))
   }
-  private def getClosestInDeltaL(that: SetOfPoints,delta: Double): List[((Point,Int), (Point,Int),Double)] = {
+  private def getClosestInDeltaL(that: SetOfPoints): List[((Point,Int), (Point,Int),Double)] = {
     def joinTwo(s1: SetOfPoints)(s2: SetOfPoints): List[((Point,Int), (Point,Int),Double)] = {
       s1
         .sY

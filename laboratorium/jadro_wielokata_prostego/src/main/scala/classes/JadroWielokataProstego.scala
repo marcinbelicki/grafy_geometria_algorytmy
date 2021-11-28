@@ -14,7 +14,7 @@ import scala.collection.mutable.ListBuffer
 
 
 
-trait Presentation extends JFXApp {
+object JadroWielokataProstego extends JFXApp {
 
   val defaultWidth = 1000
   val defaultHeight = 1000

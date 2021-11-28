@@ -1,1 +1,1 @@
-Prezentacja rozwiązania drugiego zadania laboratoryjnego znajduje się w pliku [ParaNajblizszychPunktow.scala](src/main/scala/classes/ParaNajblizszychPunktow.scala)
+Prezentacja rozwiązania trzeciego zadania laboratoryjnego znajduje się w pliku [TreeKD.scala](src/main/scala/classes/TreeKD.scala)
