@@ -4,7 +4,7 @@ import classes.Point.P
 
 
 
-object Tree {
+class Tree {
   private var tree = null.asInstanceOf[TreeX]
 
   def makeTree(list: List[Point]): Unit = {
@@ -135,11 +135,18 @@ object Tree {
 }
 
 object Test extends App {
+  val a = new Tree
+  val b = new Tree
+
+  a.makeTree(List(
+    P(1,5),
+    P(2,4),
+    P(3,3),
+    P(4,2),
+    P(5,1)
+  ))
 
 
-
-
-  val b = Tree
 
   b.makeTree((
     List(
@@ -163,8 +170,23 @@ object Test extends App {
     ))
 
 
+  println("1")
+  println("    a")
+  println(a.findSpace(1,1,5,5).mkString("\n"))
+  println("    b")
+  println(a.findSpace(2,3,3,4).mkString("\n"))
+  println("    c")
+  println(a.findSpace(4,4,5,5).mkString("\n"))
 
-  println(b.findSpace(2,2,3,3).map(_._1))
+
+  println("2")
+  println("    a")
+  println(b.findSpace(1,1,5,5).mkString("\n"))
+  println("    b")
+  println(b.findSpace(2,2,3,3).mkString("\n"))
+  println("    c")
+  println(b.findSpace(-1,0,0.5,4).mkString("\n"))
+//
 
 
 
