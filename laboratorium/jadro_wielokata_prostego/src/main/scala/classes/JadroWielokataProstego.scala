@@ -7,7 +7,6 @@ import scalafx.scene.Scene
 import scalafx.scene.input.MouseEvent
 import scalafx.scene.paint.Color
 import scalafx.scene.paint.Color._
-
 import scala.annotation.tailrec
 import scala.collection.mutable.ListBuffer
 
